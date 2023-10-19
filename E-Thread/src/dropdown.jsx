@@ -3,94 +3,106 @@ import Logo from './assets/logos.png';
 import serach from './assets/home/serach.png'
 import heart from './assets/home/heart.png'
 import cart from './assets/home/cart.png'
-import user from './assets/home/user.png'
-
+import user from './assets/home/user.png';
+import './dropdown.css'
 
 
 export function Dropdown() {
   return (
     <>
-    
-      <div className="bg-white w-5/6 h-16 ml-24 mt-2 flex align-middle justify-between rounded-md  ">
-        <div className="mt-3">
-          <img src={Logo} alt=""></img>
+
+      <div className='flex justify-between px-10 bg-white rounded-md items-center hover:shadow-md w-2/2 mx-24 '>
+        <div>
+          <img src={Logo} alt="" />
         </div>
-        <div className="NavBar flex mt-4">
-          <div className="group">
-            <button className="relative font-bold mx-7 border-b-[2px] border-black  " type="button">Home</button>
-            <ul className="absolute top-40 left-[28%] cursor-pointer bg-white font-sans text-gray-800 opacity-0 group-hover:opacity-100 space-y-3 mb-4  shadow-md rounded-lg p-6 duration-500">
-              <li className="bg-white font-normal text-[#ff497c] ">Home-Electronics</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Home-NFT</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Home-Fashion</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Home-Jewellery</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Home-Furniture</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Home-Multipurpose</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">RTL Version</li>
-            </ul>
+
+        <div className='navbar flex justify-between p-0 m-0'>
+          <div className='home-dropdown'>
+            <button className='home-button underline decoration-[3px] underline-offset-4 h-24'>Home<i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
+            <div className='home-content'>
+              <ul className='list bg-white rounded-md'>
+                <li><a className='text-[#ff497c]' href="">Home-Electronics</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Home-NFT</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Home-Fashion</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Home-Jewellery</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Home-Furniture</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Home-Multipurpose</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">RTL Version</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div className="group">
-            <button className=" relative font-bold mx-7 hover:border-b-[2px] border-black" type="button">Shop</button>
-            <ul className="bg-white font-bold font-sans text-gray-800  mx-3 cursor-pointer opacity-0 group-hover:opacity-100 duration-500 shadow-md rounded-lg p-6 absolute left-[34%]   top-40  space-y-2">
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Shop With Sidebar</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Shop No Sidebar</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 1</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 2</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 3</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 4</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 5</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 6</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 7</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Product Variation 8</li>
-            </ul>
-          </div>
-          <div className="group">
-            <button className=" relative font-bold mx-7 hover:border-b-[2px] border-black" type="button">Pages</button>
-            <ul className="bg-white font-bold font-sans text-gray-800  mx-3 cursor-pointer opacity-0 group-hover:opacity-100 duration-500 shadow-md rounded-lg p-9 absolute  top-40 left-[43%] space-y-2">
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Whishlist</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Cart</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Checkout</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Account</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Sign Up</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Sign In</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Forgot Password</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Reset Password</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Privacy Policy</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Coming Soon</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">404 Error</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Typography</li>
-            </ul>
-          </div>
-          <div>
-            <button className="bg-transparent font-sans text-gray-800 mx-5  cursor-pointer font-bold hover:border-b-[2px] border-black ">
-              About</button>
+          <div className='home-dropdown'>
+            <button className='home-button hover:underline decoration-[3px] underline-offset-4 h-24'>Shop<i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
+            <div className='home-content'>
+              <ul className='list bg-white rounded-md'>
+                <li><a className='hover:text-[#ff497c]' href="">Shop With Sidebar</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Shop No Sidebar</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 1</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 2</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 3</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 4</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 5</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 6</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 7</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Product Variation 8</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div className="group">
-            <button className=" relative font-bold mx-7 hover:border-b-[2px] border-black " type="button">Blog</button>
-            <ul className="bg-white font-bold font-sans text-gray-800   mx-3 cursor-pointer opacity-0 group-hover:opacity-100 duration-500 shadow-md rounded-lg p-10 absolute  top-40 left-[58%] space-y-2">
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Blog List</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Blog Grid</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Standard Post</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Gallary Post</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Video Post</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Audio Post</li>
-              <li className="bg-white font-normal hover:text-[#ff497c] duration-300">Quote Post</li>
-            </ul>
+          <div className='home-dropdown'>
+            <button className='home-button hover:underline decoration-[3px] underline-offset-4 h-24'>Pages<i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
+            <div className='home-content'>
+              <ul className='list bg-white rounded-md'>
+                <li><a className='hover:text-[#ff497c]' href="">Wishlist</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Cart</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Checkout</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Account</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Sign Up</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Sign In</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Forgot Password</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Reser Password</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Privacy Policy</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Coming Soon</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">404 Error</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Typography</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <button className="bg-transparent text-base font-bold font-sans text-gray-800 mx-7  cursor-pointer hover:border-b-[2px] border-black">Contact</button>
+          <div className='home-dropdown'>
+            <button className='home-button hover:underline decoration-[3px] underline-offset-4 h-24'>About</button>
           </div>
+
+          <div className='home-dropdown'>
+            <button className='home-button hover:underline decoration-[3px] underline-offset-4 h-24'>Blog<i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
+            <div className='home-content'>
+              <ul className='list bg-white rounded-md'>
+                <li><a className='hover:text-[#ff497c]' href="">Blog List</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Blog Grid</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Standard Post</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Gallery Post</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Video Post</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Audio Post</a></li>
+                <li><a className='hover:text-[#ff497c]' href="">Quote Post</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className='home-dropdown'>
+            <button className='home-button hover:underline decoration-[3px] underline-offset-4 h-24'>Contact</button>
+          </div>
+
         </div>
         <div className="flex mr-8">
-          <img className="w-8 h-5 pr-3 mt-4" src={serach} alt=""></img>
-          <img className="w-8 h-5 pr-3 mt-4" src={heart} alt=""></img>
-          <img className="w-8 h-5 pr-3 mt-4" src={cart} alt=""></img>
-          <img className="w-8 h-5 pr-3 mt-4" src={user} alt=""></img>
-        </div>
+        <img className="  w-8 h-5 pr-3 mt-2" src={serach} alt=""></img>
+        <img className="  w-8 h-5 pr-3 mt-2" src={heart} alt=""></img>
+        <img className=" w-8 h-5 pr-3 mt-2" src={cart} alt=""></img>
+        <img className=" w-8 h-5 pr-3 mt-2" src={user} alt=""></img>
       </div>
-
+        
+      </div>
+     
 
     </>
   )

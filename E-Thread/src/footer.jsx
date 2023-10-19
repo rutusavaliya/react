@@ -3,7 +3,7 @@ import parsal from './assets/home/parsal.png'
 import Fimg2 from './assets/home/Fimg2.png';
 import Fimg3 from './assets/home/Fimg3.png';
 import Fimg4 from './assets/home/Fimg4.png';
-import Img65 from './assets/home/Img65.jpeg';
+
 import email from './assets/home/email.png';
 import telephone from './assets/home/telephone.png';
 import scanbar from './assets/home/scanbar.png';
@@ -17,30 +17,31 @@ import pimg from './assets/home/pimg.png';
 import cardimg from './assets/home/cardimg.png';
 import visaimg from './assets/home/visaimg.png';
 
+
 export function Footer() {
     return (
         <>
-            <div>
-                <div>
-                    <img className="w-[76%] h-64 ml-36 mt-3 rounded-md relative" src={Img65} alt=""></img>
-                </div>
+         
+        
 
-            </div>
-            <div className="flex justify-center mt-10 w-10/12 mx-auto border-b-2 py-8">
+            <div className="flex justify-center mt-10 w-10/12 mx-auto border-b-2 py-8 ">
+
                 <div>
-                    <img className="w-9 mt-2 mr-4" src={parsal} alt=""></img>
+                    <img className="w-9 mt-2 mr-4 ml-3" src={parsal} alt=""></img>
                 </div>
                 <div className="mr-10">
                     <p className=" font-bold">Fast $ Secure Delivery</p>
                     <h2 className="text-gray-500">Tell about your service.</h2>
                 </div>
+
                 <div>
-                    <img className="w-9 mt-2 mr-4" src={Fimg2} alt=""></img>
+                    <img className="w-9 mt-2 mr-4 ml-4" src={Fimg2} alt=""></img>
                 </div>
-                <div className="mr-10">
+                <div className="mr-10 ">
                     <p className="font-bold">Money Back Guarantee</p>
                     <h2 className="text-gray-500">within 10 days.</h2>
                 </div>
+
                 <div>
                     <img className="w-9 mt-2 mr-4" src={Fimg3} alt=""></img>
                 </div>
@@ -58,7 +59,7 @@ export function Footer() {
             </div>
 
             <div className="flex justify-center py-7 w-10/12 mx-auto border-b-2 my-5">
-                <div className="mr-20">
+                <div className="mr-20 ">
                     <h1 className=" font-bold ">Support</h1>
                     <p className="mt-2 text-gray-500">685 Market street,<br></br>
                         Las Vegas, LA 95820,<br></br>
@@ -74,7 +75,7 @@ export function Footer() {
                 </div>
                 <div className="mr-20">
                     <h1 className="font-bold ">Account</h1>
-                    <h2 className="mt-2 text-gray-500">My Account</h2>
+                    <h2 className="mt-2 text-gray-500 ">My Account</h2>
                     <h2 className="mt-2 text-gray-500">Login/Register</h2>
                     <h2 className="mt-2 text-gray-500">cart</h2>
                     <h2 className="mt-2 text-gray-500">Wishlist</h2>
@@ -90,14 +91,14 @@ export function Footer() {
                 </div>
                 <div className="ml-40">
                     <h1 className="font-bold">Download App</h1>
-                    <p className="mt-2 text-gray-500">Save $3 with App $ New User only</p>
+                    <p className="mt-2 text-gray-500 text-sm">Save $3 with App $ New User only</p>
                     <div className="flex ">
                         <div>
-                            <img className="mt-2" src={scanbar} alt=""></img>
+                            <img className="mt-2 w-[84px]" src={scanbar} alt=""></img>
                         </div>
                         <div className="ml-3 mt-2">
-                            <img src={Appimg} alt=""></img>
-                            <img className="mt-2" src={Googleimg} alt=""></img>
+                            <img className="w-28" src={Appimg} alt=""></img>
+                            <img className="mt-4 w-28" src={Googleimg} alt=""></img>
                         </div>
                     </div>
                 </div>

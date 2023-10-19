@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Home, USD } from './home';
+import { English,  USD } from './home';
 import { Dropdown } from './dropdown';
-
 import Poster1 from './assets/home/Poster1.png';
 import Poster2 from './assets/home/Poster2.png';
 import giftbox from './assets/home/giftbox.png';
@@ -9,9 +8,8 @@ import keyimg from './assets/home/keyimg.png';
 import returnimg1 from './assets/home/returnimg1.png';
 import returnimg2 from './assets/home/returnimg2.png';
 import helpimg from './assets/home/helpimg.png';
-// import marketing from './assets/home/marketing.png'
-// import letterbox from './assets/home/letterbox.png'
 import { Footer } from './footer';
+import Components from "./components";
 
 
 function App() {
@@ -21,10 +19,10 @@ function App() {
     <div className=" h-screen bg-[#f9f3f0]">
       <div className=" flex justify-between">
         <div className=" flex">
-          <Home />
+          <English/>
           <USD />
         </div>
-        <div className=" flex justify-between">
+        <div className=" flex justify-between mr-24">
           <div>
             <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 text-gray-500">Help</a>
           </div>
@@ -70,29 +68,25 @@ function App() {
     </div>
 
 
-    <div className="flex justify-center mt-10">
-      <div>
-        <img className="w-[490px] pr-6 relative" src={Poster1} alt=""></img>
-        <div className="absolute top-[163%] left-[30%]">
-          <p className="  text-white font-blod text-4xl">Rich sound,<br></br>
-            for less.
-          </p>
-          <h3 className="text-gray-500">collections</h3>
+    <div className="blog-section flex justify-center  mb-10 mt-10 mr-4">
+      <div className="left-part w-[460px] overflow-hidden rounded-md group mx-4 relative">
+        <a href="#"><img src={Poster1} className="group-hover:scale-110 duration-500" alt=""/> </a>
+        <div className="content absolute top-11 right-12">
+          <h1 className="text-white text-4xl font-sans font-bold mb-s">Rich sound,<br></br>for less.</h1>
+          <a href="#" className="text-gray-600 font-medium group-hover:text-white duration-500">Collection</a>
         </div>
       </div>
-      <div>
-
-        <img className="w-[490px] pr-6 relative" src={Poster2} alt=""></img>
-        <div className="absolute top-[163%] left-[52%]" >
-          <h3 className="text-gray-400">50% Offer in Winter</h3>
-          <p className="text-white font-bold text-4xl">Get VR<br></br>
-            Reality Glass
-          </p>
+      <div className="left-part w-[460px] overflow-hidden group rounded-md mx-4 relative">
+        <a href="#"><img src={Poster2} className="group-hover:scale-110 duration-500" alt=""/> </a>
+        <div className="content absolute top-11  left-10">
+          <a href="#" className="text-gray-600 font-medium group-hover:text-white duration-500">50% offer in winter</a>
+          <h1 className="text-white text-4xl font-sans font-bold mb-s">Get VR<br></br>Reality Glass</h1>
         </div>
-
       </div>
     </div>
-
+     <div>
+      <Components/>
+     </div>   
 
     <div>
       <Footer />

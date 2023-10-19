@@ -1,35 +1,58 @@
 import React from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
+import './home.css'
 
-
-export function Home() {
-    return (
-        <>
-         <div className="ml-10">
-                    <button type="button">English</button>
-                    <ul className="border border-black bg-white w-16 h-20 text-center ">
-                        <li className="hover:bg-pink-500 duration-500">English</li>
-                        <li className=" hover:bg-pink-500 duration-500">Arabic</li>
-                        <li className=" hover:bg-pink-500 duration-500">Spanish</li>
-                    </ul>
-                </div>
-        </>
-    )
-}
+export  function  English() {
+    function myFunction() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      return (
+        <div className="dropdown mr-6 ml-24">
+          <button onClick={myFunction} className="dropbtn text-sm text-gray-500 mb-2 cursor-pointer">English <i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs"></i></button>
+          <div id="myDropdown1" className="dropdown-content bg-white shadow-lg">
+            <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#home">English</a>
+            <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#about">Arabic</a>
+            <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#contact">Spanish</a>
+          </div>
+        </div>
+      )
+    }
 
 export function USD() {
-    return (
-        <>
-       
-                <div className="ml-10">
-                    <button type="button">USD</button>
-                    <ul className="border border-black bg-white w-16 h-20 text-center ">
-                        <li className="hover:bg-pink-500 duration-500">USD</li>
-                        <li className=" hover:bg-pink-500 duration-500">AUD</li>
-                        <li className=" hover:bg-pink-500 duration-500">EUR</li>
-                    </ul>
-                </div>
-           
-        </>
-    )
-}
+    function myFunction() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+      }
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      return (
+        <div className="dropdown">
+          <button onClick={myFunction} className="dropbtn text-sm text-gray-500 mb-2 cursor-pointer">USD <i class="fa-solid fa-angle-down text-gray-500 text-xs"></i></button>
+          <div id="myDropdown2" className="dropdown-content bg-white shadow-lg">
+            <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#home">USD</a>
+            <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#about">AUD</a>
+            <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#contact">EUR</a>
+          </div>
+        </div>
+      )
+    }
